@@ -6,7 +6,7 @@ CPSP is a collection of tools related to the prediction of optimal structures in
 
 **Background**: The principles of protein folding and evolution pose problems of very high inherent complexity. Often these problems are tackled using simplified protein models, e.g. lattice proteins. The CPSP-tools package provides programs to solve exactly and completely the problems typical of studies using 3D lattice protein models. Among the tasks addressed are the prediction of (all) globally optimal and/or suboptimal structures as well as sequence design and neutral network exploration.
 
-**Results**: In contrast to stochastic approaches, which are not capable of answering many fundamental questions, our methods are based on fast, non-heuristic techniques. The resulting tools are designed for high-throughput studies of 3D-lattice proteins utilising the Hydrophobic-Polar (HP) model. The source bundle is freely available [1].
+**Results**: In contrast to stochastic approaches, which are not capable of answering many fundamental questions, our methods are based on fast, non-heuristic techniques. The resulting tools are designed for high-throughput studies of 3D-lattice proteins utilising the Hydrophobic-Polar (HP) model.
 
 **Conclusion**: The CPSP-tools package is the first set of exact and complete methods for extensive, high-throughput studies of non-restricted 3D-lattice protein models. In particular, our package deals with cubic and face centered cubic (FCC) lattices.
 
