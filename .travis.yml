@@ -11,9 +11,13 @@ before_install:
   - travis_retry sudo apt-get install -qq libboost-all-dev
 
 script:
+ - wget http://www.bioinf.uni-freiburg.de/Software/Libraries/download/biu-2.3.6.tar.gz
+ - tar xvfz biu-2.3.6.tar.gz
+ - cd biu-2.3.6 && ./configure --prefix=$HOME/biu
+ - make && make install
  - wget http://www.gecode.org/download/gecode-4.1.0.tar.gz
  - tar xvfz gecode-4.1.0.tar.gz
  - cd gecode-4.1.0 && ./configure --prefix=$HOME/gecode --disable-examples --disable-flatzinc --disable-driver --disable-thread --disable-gist --disable-qt --disable-mpfr --disable-float-vars  --enable-static --disable-shared
  - make && make install
- - cd $TRAVIS_BUILD_DIR && ./configure --prefix=$HOME/CPSP-tools --with-geode=$HOME/geode
+ - cd $TRAVIS_BUILD_DIR && ./configure --prefix=$HOME/CPSP-tools --with-BIU=$HOME/biu --with-gecode=$HOME/gecode
  - make && make install
