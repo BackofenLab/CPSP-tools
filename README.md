@@ -18,14 +18,12 @@ Feel free to contribute to this project by wirting [Issues](https://github.com/B
 If you use CPSP-tools, please cite our articles
 
 - [CPSP-tools – Exact and complete algorithms for high-throughput 3D lattice protein studies](https://doi.org/10.1186/1471-2105-9-230)
-
   Martin Mann, Sebastian Will and Rolf Backofen,
   BMC Bioinformatics, 2008, Volume 9, Page 230,
-  DOI: [10.1186/1471-2105-9-230](https://doi.org/10.1186/1471-2105-9-230)
+  DOI: 10.1186/1471-2105-9-230
 
 - [CPSP-web-tools: a server for 3D lattice protein studies](https://doi.org/10.1093/bioinformatics/btp034)
-
   Martin Mann, Cameron Smith, Mohamad Rabbath, Marlien Edwards, Sebastian Will and Rolf Backofen,
   Bioinformatics, 2009, Volume 25, Number 5, Page 676,
-  DOI: [10.1093/bioinformatics/btp034](https://doi.org/10.1093/bioinformatics/btp034)
+  DOI: 10.1093/bioinformatics/btp034
 
