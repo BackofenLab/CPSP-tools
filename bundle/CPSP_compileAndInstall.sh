@@ -30,7 +30,7 @@ echo " make and install Gecode library";
 
 tar -xzf gecode-$VERSION_GECODE.tar.gz || error_exit "Error while unpacking gecode-$VERSION_GECODE.tar.gz";
 cd gecode-$VERSION_GECODE;
-CXXFLAGS="-fpermissive -Wnonnull-compare" ./configure --enable-static --disable-shared --disable-set-vars --disable-examples --prefix=$INSTALL_PATH || (cd ..; error_exit "Configure of gecode-$VERSION_GECODE failed!");
+CXXFLAGS="-fpermissive -Wno-nonnull-compare" ./configure --enable-static --disable-shared --disable-set-vars --disable-examples --prefix=$INSTALL_PATH || (cd ..; error_exit "Configure of gecode-$VERSION_GECODE failed!");
 make -j $MAKE_JOBS || (cd ..; error_exit "Compilation of gecode-$VERSION_GECODE failed!");
 make install || (cd ..; error_exit "Installation of gecode-$VERSION_GECODE failed!");
 cd ..;
@@ -41,7 +41,7 @@ echo " make and install BIU library";
 
 tar -xzf biu-$VERSION_BIU.tar.gz || error_exit "Error while unpacking biu-$VERSION_BIU.tar.gz";
 cd biu-$VERSION_BIU;
-CXXFLAGS="-fpermissive" ./configure --prefix=$INSTALL_PATH || (cd ..; error_exit "Configure of biu-$VERSION_BIU failed!");
+./configure --prefix=$INSTALL_PATH || (cd ..; error_exit "Configure of biu-$VERSION_BIU failed!");
 make -j $MAKE_JOBS || (cd ..; error_exit "Compilation of biu-$VERSION_BIU failed!");
 make install || (cd ..; error_exit "Installation of biu-$VERSION_BIU failed!");
 cd ..;
@@ -52,7 +52,7 @@ echo " make and install CPSP package";
 
 tar -xzf cpsp-$VERSION_CPSP.tar.gz || error_exit "Error while unpacking cpsp-$VERSION_CPSP.tar.gz";
 cd cpsp-$VERSION_CPSP;
-./configure --enable-static-linking --with-BIU=$INSTALL_PATH --with-gecode=$INSTALL_PATH --prefix=$INSTALL_PATH || (cd ..; error_exit "Configure of cpsp-$VERSION_CPSP failed!");
+CXXFLAGS="-Wno-deprecated" ./configure --enable-static-linking --with-BIU=$INSTALL_PATH --with-gecode=$INSTALL_PATH --prefix=$INSTALL_PATH || (cd ..; error_exit "Configure of cpsp-$VERSION_CPSP failed!");
 make -j $MAKE_JOBS || (cd ..; error_exit "Compilation of cpsp-$VERSION_CPSP failed!");
 make install || (cd ..; error_exit "Installation of cpsp-$VERSION_CPSP failed!");
 cd ..;
