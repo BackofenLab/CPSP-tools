@@ -67,7 +67,7 @@ DX_INIT_DOXYGEN([cpsp], [misc/doxygen/doxygen.config], [doc])
 AM_INIT_AUTOMAKE
 
 AC_LANG([C++])
-AC_DEFINE([__cplusplus])
+#AC_DEFINE([__cplusplus])
 
 
 ###############################################################################
